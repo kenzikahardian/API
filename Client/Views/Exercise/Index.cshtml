@@ -1,0 +1,105 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+@*<h1 class="judul mt-5">Web Programming</h1>
+    <div class="container">
+        <section id="1">
+            <button class="html btn btn-danger" onclick="html()">HTML</button>
+            <button class="css btn btn-primary" onclick="css()">CSS</button>
+            <button class="js btn btn-warning" onclick="js()">JavaScript</button>
+        </section>
+        <section id="2">
+            <h2 class="judul2">HTML</h2>
+            <img src="https://www.gamelab.id/uploads/news/berita-213-belajar-mengenal-dasar-html-20200716-163110.png" width="500" h eight="300">
+            <p class="p1">HTML (stands for Hypertext Markup Language) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document.</p>
+        </section>
+    </div>
+    <h1 class="judul">Web Programming</h1>
+    <div class="container">
+        <section id="1">
+            <button class="html" onclick="html()">HTML</button>
+            <button class="css" onclick="css()">CSS</button>
+            <button class="js" onclick="js()">JavaScript</button>
+        </section>
+        <section id="2">
+            <h2 class="judul2">HTML</h2>
+            <img src="https://www.gamelab.id/uploads/news/berita-213-belajar-mengenal-dasar-html-20200716-163110.png" width="500" h eight="300">
+            <p class="p1">HTML (stands for Hypertext Markup Language) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document.</p>
+        </section>
+    </div>
+*@
+<h1 class="judul mt-5">Table Pokemon</h1>
+<table class="table table-hover" id="tablePoke">
+    <thead class="table-dark">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody class="tablePoke">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>
+                <button class="btn btn-primary">Detail </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Pokemon Detail</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="text-center" id="detailImage">
+                        <img src="" alt="" />
+                    </div>
+                    <div class="row text-center">
+                        <div class="detailName col text-capitalize h3"><b>Pokemon</b></div>
+                    </div>
+                    <div class="row">
+                        <span class="badge" style="font-size: 20px; margin: auto">pokemon</span>
+                    </div>
+                    <div class="text-center bg-secondary" style="color: white "><b>Detail</b></div>
+                    <div style="color: black ">
+                        <div class="row">
+                            <div class="col"><b>Ability</b></div>
+                            <div class="ability col">Pokemon</div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><b>Weight</b></div>
+                            <div class="weight col">100</div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><b>Height</b></div>
+                            <div class="height col">200</div>
+                        </div>
+                    </div>
+                    <div class="text-center bg-secondary" style="color: white "><b>Stat</b></div>
+                    <div style="color: black " id="stat">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                @*<button type="button" class="btn btn-primary">Save changes</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

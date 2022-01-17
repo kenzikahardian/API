@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LayoutLogin";
+}
+@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<div class="kotak_login">
+    <h1 class="tulisan_login"><b>Welcome @HttpContextAccessor.HttpContext.Session.GetString("JWToken");<b></h1>
+    <form action="/Accounts/Auth" method="post" id="asd">
+        <input type="text" id="inputEmail" name="Email" class="form_login" placeholder="Username or email ..">
+
+        <input type="text" id="inputPass" name="Password" class="form_login" placeholder="Password ..">
+
+        <input type="submit" class="tombol_login" value="LOGIN">
+        <br />
+        <br />
+        <center>
+            <a class="link" href="home">Forgot Password</a>
+        </center>
+    </form>
+</div>

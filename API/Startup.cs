@@ -67,7 +67,7 @@ namespace API
             });*/
             services.AddCors(c =>
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
             services.AddSwaggerGen(c =>
             {
@@ -101,7 +101,7 @@ namespace API
             app.UseAuthentication();
             app.UseAuthorization();
             //app.UseCors(options => options.WithOrigins("https://localhost:44347"));
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseEndpoints(endpoints =>
             {

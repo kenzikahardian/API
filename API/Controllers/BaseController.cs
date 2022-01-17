@@ -28,9 +28,9 @@ namespace API.Base
             var data = repository.Get().Count();
             if (data != 0)
             {
-                var success = repository.Get();
-                return Ok(new { status = HttpStatusCode.OK, success });
-            }
+                
+                return Ok(repository.Get());
+            }   
             else
             {
                 return BadRequest(new { status = HttpStatusCode.BadRequest, message = "Data is empty" });

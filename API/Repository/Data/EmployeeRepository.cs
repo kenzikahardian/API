@@ -63,11 +63,12 @@ namespace API.Repository.Data
                         join uni in myContext.Universities
                            on edu.UniversityID equals uni.UniversityID
                         select new
-                        { FullName = emp.FirstName + emp.LastName,
+                        {   NIK = emp.NIK,
+                            FullName = emp.FirstName +" "+ emp.LastName,
                             PhoneNumber = emp.Phone,
-                            Gender = emp.Gender == 0 ? "Laki-Laki" : "Perempuan",
+                            Gender = emp.Gender.ToString(),
                             Email = emp.Email,
-                            BirthDate = emp.Birthdate,
+                            BirthDate = emp.BirthDate,
                             Salary = emp.Salary,
                             GPA = edu.GPA,
                             Degree = edu.Degree,
@@ -96,7 +97,7 @@ namespace API.Repository.Data
                     FirstName = registerVM.FirstName,
                     LastName = registerVM.LastName,
                     Phone = registerVM.Phone,
-                    Birthdate = registerVM.BirthDate,
+                    BirthDate = registerVM.BirthDate,
                     Salary = registerVM.Salary,
                     Email = registerVM.Email,
                     Gender = registerVM.Gender
